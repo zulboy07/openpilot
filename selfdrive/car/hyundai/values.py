@@ -79,7 +79,7 @@ class CAR:
   KONA = "HYUNDAI KONA 2020"
   KONA_EV = "HYUNDAI KONA ELECTRIC 2019"
   KONA_EV_2022 = "HYUNDAI KONA ELECTRIC 2022"
-  KONA_HEV = "HYUNDAI KONA HYBRID 2020"
+  KONA_HEV = "HYUNDAI KONA HYBRID 2021"
   SANTA_FE = "HYUNDAI SANTA FE 2019"
   SANTA_FE_2022 = "HYUNDAI SANTA FE 2022"
   SANTA_FE_HEV_2022 = "HYUNDAI SANTA FE HYBRID 2022"
@@ -165,7 +165,7 @@ CAR_INFO: Dict[str, Optional[Union[HyundaiCarInfo, List[HyundaiCarInfo]]]] = {
   CAR.KONA: HyundaiCarInfo("Hyundai Kona 2020", harness=Harness.hyundai_b),
   CAR.KONA_EV: HyundaiCarInfo("Hyundai Kona Electric 2018-21", harness=Harness.hyundai_g),
   CAR.KONA_EV_2022: HyundaiCarInfo("Hyundai Kona Electric 2022", harness=Harness.hyundai_o),
-  CAR.KONA_HEV: HyundaiCarInfo("Hyundai Kona Hybrid 2020", video_link="https://youtu.be/0dwpAHiZgFo", harness=Harness.hyundai_i),  # TODO: check packages
+  CAR.KONA_HEV: HyundaiCarInfo("Hyundai Kona Hybrid 2021", harness=Harness.hyundai_o),  # Testing
   CAR.SANTA_FE: HyundaiCarInfo("Hyundai Santa Fe 2019-20", "All", harness=Harness.hyundai_d),
   CAR.SANTA_FE_2022: HyundaiCarInfo("Hyundai Santa Fe 2021-22", "All", video_link="https://youtu.be/VnHzSTygTS4", harness=Harness.hyundai_l),
   CAR.SANTA_FE_HEV_2022: HyundaiCarInfo("Hyundai Santa Fe Hybrid 2022", "All", harness=Harness.hyundai_l),
@@ -1530,20 +1530,28 @@ FW_VERSIONS = {
   CAR.KONA_HEV: {
     (Ecu.abs, 0x7d1, None): [
       b'\xf1\x00OS IEB \x01 104 \x11  58520-CM000',
+      b'\xf1\x00OS IEB \x03 102!\x03" 58520-CM010',
+      b'\xf1\x8758520-CM010\xf1\x00OS IEB \x03 102!\x03" 58520-CM010',
     ],
     (Ecu.fwdRadar, 0x7d0, None): [
       b'\xf1\x00OShe SCC FNCUP      1.00 1.01 99110-CM000         ',
+      b'\xf1\x00YB__ FCA -----      1.00 1.01 99110-J9000      \x00\x00\x00',
     ],
     (Ecu.eps, 0x7d4, None): [
       b'\xf1\x00OS  MDPS C 1.00 1.00 56310CM030\x00 4OHDC100',
+      b'\xf1\x00OSP MDPS C 1.00 1.02 56310/CM970 4OHPC102',
     ],
     (Ecu.fwdCamera, 0x7c4, None): [
       b'\xf1\x00OSH LKAS AT KOR LHD 1.00 1.01 95740-CM000 l31',
+      b'\xf1\x00OSP LKA  AT EUR RHD 1.00 1.00 99211-CM010 743',
     ],
     (Ecu.transmission, 0x7e1, None): [
       b'\xf1\x816U3J9051\x00\x00\xf1\x006U3H1_C2\x00\x006U3J9051\x00\x00HOS0G16DS1\x16\xc7\xb0\xd9',
+      b'\xf1\x006U3L0_C2\x00\x006U3K6051\x00\x00HOS0G16UL1\xf0B\x88n',
+      b'\xf1\x816U3K6051\x00\x00\xf1\x006U3L0_C2\x00\x006U3K6051\x00\x00HOS0G16UL1\xf0B\x88n',
     ],
     (Ecu.engine, 0x7e0, None): [
+      b'\xf1\x816H6F6051\x00\x00\x00\x00\x00\x00\x00\x00',
       b'\xf1\x816H6F6051\x00\x00\x00\x00\x00\x00\x00\x00',
     ]
   },
