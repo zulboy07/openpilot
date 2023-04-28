@@ -1529,29 +1529,23 @@ FW_VERSIONS = {
   },
   CAR.KONA_HEV: {
     (Ecu.abs, 0x7d1, None): [
-      b'\xf1\x00OS IEB \x01 104 \x11  58520-CM000',
       b'\xf1\x00OS IEB \x03 102!\x03" 58520-CM010',
       b'\xf1\x8758520-CM010\xf1\x00OS IEB \x03 102!\x03" 58520-CM010',
     ],
     (Ecu.fwdRadar, 0x7d0, None): [
-      b'\xf1\x00OShe SCC FNCUP      1.00 1.01 99110-CM000         ',
       b'\xf1\x00YB__ FCA -----      1.00 1.01 99110-J9000      \x00\x00\x00',
     ],
     (Ecu.eps, 0x7d4, None): [
-      b'\xf1\x00OS  MDPS C 1.00 1.00 56310CM030\x00 4OHDC100',
       b'\xf1\x00OSP MDPS C 1.00 1.02 56310/CM970 4OHPC102',
     ],
     (Ecu.fwdCamera, 0x7c4, None): [
-      b'\xf1\x00OSH LKAS AT KOR LHD 1.00 1.01 95740-CM000 l31',
       b'\xf1\x00OSP LKA  AT EUR RHD 1.00 1.00 99211-CM010 743',
     ],
     (Ecu.transmission, 0x7e1, None): [
-      b'\xf1\x816U3J9051\x00\x00\xf1\x006U3H1_C2\x00\x006U3J9051\x00\x00HOS0G16DS1\x16\xc7\xb0\xd9',
       b'\xf1\x006U3L0_C2\x00\x006U3K6051\x00\x00HOS0G16UL1\xf0B\x88n',
       b'\xf1\x816U3K6051\x00\x00\xf1\x006U3L0_C2\x00\x006U3K6051\x00\x00HOS0G16UL1\xf0B\x88n',
     ],
     (Ecu.engine, 0x7e0, None): [
-      b'\xf1\x816H6F6051\x00\x00\x00\x00\x00\x00\x00\x00',
       b'\xf1\x816H6F6051\x00\x00\x00\x00\x00\x00\x00\x00',
     ]
   },
